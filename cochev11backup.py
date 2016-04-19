@@ -1,5 +1,3 @@
-#! /usr/bin/python
-
 import serial
 import Tkinter as tk
 from Tkinter import *

@@ -1,5 +1,4 @@
-#! /usr/bin/python
-
+#!/usr/bin/env python
 import serial
 import Tkinter as tk
 from Tkinter import *
@@ -245,6 +244,7 @@ imagenpuerta=PhotoImage(file="puerta.gif")
 imagencalefacion=PhotoImage(file="calefacion.gif")
 imagensensor=PhotoImage(file="sensor.gif")
 imagencontacto=PhotoImage(file="contacto.gif")
+imagencerrar=PhotoImage(file="radioactive.gif")
 lblimagen=Label(root, image=imagenfondo).place(x=150, y=0)
 #w = Scale(root, label="Servo1",  from_=0, to=255, orient=HORIZONTAL ,fg="blue",command=Servo1,
 #length=200) #Creamos un dial para recoger datos numericos
@@ -272,21 +272,27 @@ button4.config(  height = 96, width = 96  )
 button6 = Button(root, image=imagenpuerta,fg="blue", command=Puertas)
 #button6.grid(row=1, column=1)
 button6.config( height = 96, width = 96)
-button6.place (x=530, y=10)
+button6.place (x=570, y=10)
 button11 = Button(root, image=imagensensor,fg="blue", command=Sensores)
 #button11.grid(row=6, column=1)
 button11.config( height = 96, width = 96 )
-button11.place (x=640, y=10)
+button11.place (x=700, y=10)
 
 button13 = Button(root, image=imagencalefacion, fg="blue", command=Calefacion)
 #button13.grid(row=12, column=2)
 button13.config( height = 96, width = 96 )
-button13.place (x=190, y=10)
+button13.place (x=140, y=10)
 
 button30 = Button(root, image=imagencontacto, fg="blue", command=arrancar)
 #button13.grid(row=12, column=2)
 button30.config( height = 96, width = 96 )
 button30.place (x=10, y=200)
+
+
+cerrar = Button(root,image=imagencerrar, command=root.destroy)
+cerrar.config( height = 96, width = 96 )
+cerrar.place (x=700, y=200)
+#Button31.pack()
 
 root.title('GUI de Leds')
 root.geometry("800x420")
